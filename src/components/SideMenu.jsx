@@ -13,7 +13,6 @@ const SideMenu = ({ isOpen, onClose }) => {
     const [gptText, setGptText] = useState("");
     const [activeTab, setActiveTab] = useState(1);
 
-
     const handleExport = async () => {
         if (exportFormat === 'PowerPoint') {
             const pptx = new pptxgen();
@@ -47,7 +46,7 @@ const SideMenu = ({ isOpen, onClose }) => {
 
             // スライド1枚目
             const slide1 = pptx.addSlide({ masterName: "master" });
-            slide1.addText(cardTitle, { x: 0, y: '40%', w: '100%', h: 1.5, align: 'center', fontSize: 24 });
+            slide1.addText(cardTitle || "スライドのタイトル", { x: 0, y: '40%', w: '100%', h: 1.5, align: 'center', fontSize: 24 });
 
             // スライド2枚目
             const slide2 = pptx.addSlide({ masterName: "master" });
