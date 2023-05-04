@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("./assets/image/gpt-card-bg.png");
+  background-size:  cover;                /* 画像のサイズ指定 */
+  color: #1d1d1d;
+  line-height: 1.5;
+  font-family: "M PLUS Rounded 1c";
+}
+.st0{fill:none;stroke:#333333;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+.st1{fill:#333333;stroke:#333333;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+.st2{fill:#323333;}
+
+
+.card-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.card-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.card-exit {
+  opacity: 1;
+}
+
+.card-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
