@@ -16,7 +16,7 @@ export const useGPTCreateCards = async (cardTitle, cardType, setError) => {
 あなたはシステム設計のプロです。
 作りたい成果物は、${cardTitle}です。
 成果物の種類は、${cardType}です。
-上記の要件定義のために必要な要素のYamlを作り、より良い成果物に仕上げるための、要件定義のステップをlistNameとして6つ出力してください。
+上記の要件定義のために必要な要素のYaml  を作り、より良い成果物に仕上げるための、要件定義のステップをlistNameとして6つ出力してください。
 ・listName:要件定義のステップバイステップでの手順
 ・title:項目名
 ・description:提案(箇条書き)

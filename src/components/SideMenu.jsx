@@ -12,6 +12,7 @@ const SideMenu = ({ isOpen, onClose }) => {
     const [exportFormat, setExportFormat] = useState('PowerPoint');
     const [gptText, setGptText] = useState("");
     const [activeTab, setActiveTab] = useState(1);
+    const [savedData,setSavedData] = useState(JSON.parse(localStorage.getItem('savedData'))||[]);
 
     const handleExport = async () => {
         if (exportFormat === 'PowerPoint') {
@@ -81,9 +82,10 @@ const SideMenu = ({ isOpen, onClose }) => {
         const id = uuidv4();
         const datetime = new Date().toISOString();
         const saveData = { id, datetime, data, cardTitle, cardType };
-        const savedData = JSON.parse(localStorage.getItem('savedData')) || [];
-        savedData.push(saveData);
-        localStorage.setItem('savedData', JSON.stringify(savedData));
+        const newSaveData = savedData;
+        newSaveData.push(saveData);
+        setSavedData(newSaveData);
+        localStorage.setItem('savedData', JSON.stringify(newSaveData));
     };
 
     const loadFromLocalStorage = () => {
@@ -201,7 +203,7 @@ const SideMenu = ({ isOpen, onClose }) => {
                                 className="border-2 border-gray-200 w-full mb-4 p-2"
                             >
                                 <option value="">選択してください</option>
-                                {(JSON.parse(localStorage.getItem('savedData')) || []).map(
+                                {savedData.map(
                                     (save) => (
                                         <option key={save.id} value={save.id}>
                                             {save.datetime}

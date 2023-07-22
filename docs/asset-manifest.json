@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/GPTCards/static/css/main.c95700ad.css",
+    "main.js": "/GPTCards/static/js/main.25e31df5.js",
+    "static/media/gpt-card-bg.png": "/GPTCards/static/media/gpt-card-bg.a31475774db27e456902.png",
+    "index.html": "/GPTCards/index.html",
+    "main.c95700ad.css.map": "/GPTCards/static/css/main.c95700ad.css.map",
+    "main.25e31df5.js.map": "/GPTCards/static/js/main.25e31df5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c95700ad.css",
+    "static/js/main.25e31df5.js"
+  ]
+}
